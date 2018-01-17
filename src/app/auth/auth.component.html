@@ -1,1 +1,79 @@
+<div class="form">
 
+  <mat-tab-group>
+    <mat-tab label="Tab 1">
+      <ng-template mat-tab-label>
+        <h2>Sign Up</h2>
+      </ng-template>
+      <div id="signup">
+        <h1>Sign Up for Free</h1>
+
+        <form>
+
+          <div class="top-row">
+            <div class="field-wrap">
+              <mat-form-field class="full">
+                <input matInput placeholder="Your Name">
+              </mat-form-field>
+            </div>
+
+            <div class="field-wrap">
+              <mat-form-field class="full">
+                <input matInput placeholder="Your SurName">
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="field-wrap">
+            <mat-form-field class="full">
+              <input matInput placeholder="Your Email">
+            </mat-form-field>
+          </div>
+
+          <div class="field-wrap">
+            <mat-form-field class="full">
+              <input matInput placeholder="Your Password">
+            </mat-form-field>
+          </div>
+
+          <button mat-button type="submit" class="button button-block">Get Started</button>
+
+        </form>
+
+      </div>
+    </mat-tab>
+    <mat-tab label="Tab 2">
+      <ng-template mat-tab-label>
+        <h2>Log In</h2>
+      </ng-template>
+      <div id="login">
+        <h1>Welcome Back!</h1>
+
+        <form>
+
+          <div class="field-wrap">
+            <mat-form-field class="full">
+              <input matInput placeholder="Email Address">
+            </mat-form-field>
+          </div>
+
+          <div class="field-wrap">
+            <mat-form-field class="full">
+              <input matInput placeholder="Password">
+            </mat-form-field>
+          </div>
+
+          <button mat-button class="button button-block">Log In</button>
+
+        </form>
+
+      </div>
+
+
+    </mat-tab>
+  </mat-tab-group>
+
+  <!-- tab-content -->
+
+</div>
+<!-- /form -->
