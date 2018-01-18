@@ -16,6 +16,10 @@ $br: 4px;
     box-sizing: border-box;
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px rgba($form-bg, .9) inset;
+}
+
 h2 {
     text-decoration: none;
     color: black;
