@@ -9,13 +9,15 @@ import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProfileComponent } from './profile/profile.component';
 import { CreateComponent } from './create/create.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
     ProfileComponent,
-    CreateComponent
+    CreateComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +26,7 @@ import { CreateComponent } from './create/create.component';
     MaterialModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [FormComponent]
 })
 export class AppModule { }
