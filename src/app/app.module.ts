@@ -12,6 +12,7 @@ import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProfileComponent } from './profile/profile.component';
 import { CreateComponent } from './create/create.component';
+import { FormComponent } from './form/form.component';
 
 import { AuthService } from './auth/auth.service';
 
@@ -20,7 +21,8 @@ import { AuthService } from './auth/auth.service';
     AppComponent,
     AuthComponent,
     ProfileComponent,
-    CreateComponent
+    CreateComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +35,7 @@ import { AuthService } from './auth/auth.service';
     MaterialModule
   ],
   providers: [AuthService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [FormComponent]
 })
 export class AppModule { }
