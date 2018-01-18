@@ -8,12 +8,14 @@ import { AuthComponent } from './auth/auth.component';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProfileComponent } from './profile/profile.component';
+import { CreateComponent } from './create/create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
-    ProfileComponent
+    ProfileComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
