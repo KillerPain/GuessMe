@@ -11,6 +11,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProfileComponent } from './profile/profile.component';
+import { CreateComponent } from './create/create.component';
 
 import { AuthService } from './auth/auth.service';
 
@@ -19,6 +20,7 @@ import { AuthService } from './auth/auth.service';
     AppComponent,
     AuthComponent,
     ProfileComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,

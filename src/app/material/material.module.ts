@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatInputModule, MatButtonModule, MatIconModule, MatListModule, MatDialogModule, MatTabsModule } from '@angular/material';
+// tslint:disable-next-line:max-line-length
+import { MatInputModule, MatButtonModule, MatIconModule, MatListModule, MatDialogModule, MatTabsModule, MatStepperModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -10,7 +11,8 @@ import { MatInputModule, MatButtonModule, MatIconModule, MatListModule, MatDialo
     MatIconModule,
     MatListModule,
     MatDialogModule,
-    MatTabsModule
+    MatTabsModule,
+    MatStepperModule
   ],
   declarations: [],
   exports: [
@@ -19,7 +21,8 @@ import { MatInputModule, MatButtonModule, MatIconModule, MatListModule, MatDialo
     MatIconModule,
     MatListModule,
     MatDialogModule,
-    MatTabsModule
+    MatTabsModule,
+    MatStepperModule
   ]
 })
 export class MaterialModule { }

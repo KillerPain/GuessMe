@@ -1,0 +1,50 @@
+<div class="container">
+  <h1>Create Game</h1>
+  <mat-vertical-stepper>
+    <mat-step>
+      <form firstFormGroup>
+        <ng-template matStepLabel>Name Your Game</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <form secondFormGroup>
+        <ng-template matStepLabel>Add Questions</ng-template>
+        <button mat-button class="add">Add Question</button>
+        <div class="questions">
+          <div class="card">
+            <span>Name</span>
+            <span class="answers correct">Correct Answer</span>
+            <span class="answers">Answer</span>
+            <span class="answers">Answer</span>
+            <span class="answers">Answer</span>
+          </div>
+          <div class="card">
+            <span>Name</span>
+            <span class="answers correct">Correct Answer</span>
+            <span class="answers">Answer</span>
+            <span class="answers">Answer</span>
+            <span class="answers">Answer</span>
+          </div>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <h3>You are now done.</h3>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button>Finish</button>
+      </div>
+    </mat-step>
+  </mat-vertical-stepper>
+</div>
