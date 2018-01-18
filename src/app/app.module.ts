@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AuthComponent
+    AuthComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
