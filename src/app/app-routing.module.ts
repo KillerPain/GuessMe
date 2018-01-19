@@ -21,7 +21,7 @@ const routes: Routes = [
     component: CreateComponent
   },
   {
-    path: 'game',
+    path: 'game/:id',
     component: GameComponent
   },
   {
