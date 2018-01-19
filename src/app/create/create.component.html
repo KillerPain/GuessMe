@@ -13,30 +13,28 @@
       </form>
     </mat-step>
     <mat-step>
-      <form>
-        <ng-template matStepLabel>Add Questions</ng-template>
-        <button mat-button class="add" (click)="openDialog()">Add Question</button>
-        <div class="questions">
-          <div class="card">
-            <span>Name</span>
-            <span class="answers correct">Correct Answer</span>
-            <span class="answers">Answer</span>
-            <span class="answers">Answer</span>
-            <span class="answers">Answer</span>
-          </div>
-          <div class="card">
-            <span>Name</span>
-            <span class="answers correct">Correct Answer</span>
-            <span class="answers">Answer</span>
-            <span class="answers">Answer</span>
-            <span class="answers">Answer</span>
-          </div>
+      <ng-template matStepLabel>Add Questions</ng-template>
+      <button mat-button class="add" (click)="openDialog()">Add Question</button>
+      <div class="questions">
+        <div class="card">
+          <span>Name</span>
+          <span class="answers correct">Correct Answer</span>
+          <span class="answers">Answer</span>
+          <span class="answers">Answer</span>
+          <span class="answers">Answer</span>
         </div>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
+        <div class="card">
+          <span>Name</span>
+          <span class="answers correct">Correct Answer</span>
+          <span class="answers">Answer</span>
+          <span class="answers">Answer</span>
+          <span class="answers">Answer</span>
         </div>
-      </form>
+      </div>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
     </mat-step>
     <mat-step>
       <ng-template matStepLabel>Done</ng-template>
