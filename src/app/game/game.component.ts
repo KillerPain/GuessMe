@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router/src/router_state';
+import { ActivatedRoute } from '@angular/router';
 import { GameComponentService } from './game-component.service';
 @Component({
   selector: 'gm-game',
@@ -16,11 +16,13 @@ export class GameComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.id = +params['id'];
       const playerData = JSON.parse(localStorage.getItem('playerData'));
-      if (playerData === undefined || playerData['token'] === undefined) {
+      if (playerData === null || playerData['token'] === null) {
         //
+        return;
       }
-      if (this.service.hasPlayer(this.id, playerData)) {
+      if (!this.service.hasPlayer(this.id, playerData)) {
         //
+        return;
       }
     });
   }
