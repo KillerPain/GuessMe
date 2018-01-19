@@ -5,12 +5,18 @@
     form {
         display: flex;
         flex-direction: column;
-        h2 {
-            margin: 5px auto;
-        }
-        .time {
-            display: flex;
-            justify-content: space-around;
+        .top {
+            h2 {
+                margin: 5px 34%;
+            }
+            padding: 3px;
+            border-bottom: 1px solid #cccccc;
+            box-shadow: 0px 1px 1px 0px rgba(black, .5);
+            margin: 10px 0;
+            .time {
+                display: flex;
+                justify-content: space-around;
+            }
         }
         .answers {
             display: flex;
