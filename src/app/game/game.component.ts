@@ -19,11 +19,15 @@ export class GameComponent implements OnInit {
       this.id = +params['id'];
       const playerData = JSON.parse(localStorage.getItem('playerData'));
       if (playerData === null || playerData['token'] === null) {
+        this.toJoin(this.id);
         return;
       }
-      if (!this.service.hasPlayer(this.id, playerData)) {        
-        return;
-      }
+      this.service.hasPlayer(this.id, playerData).then(result => {
+        console.log(result);
+        if (!result) {
+          this.toJoin(this.id);
+        }
+      })
     });
   }
 
