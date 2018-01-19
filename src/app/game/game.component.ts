@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router/src/router_state';
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'gm-game',
@@ -10,12 +11,16 @@ export class GameComponent implements OnInit {
 
   id: number;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private r: Router) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.id = +params['id'];
     });
+  }
+
+  toJoin(id) {
+    this.r.navigate(['join']);
   }
 
 }

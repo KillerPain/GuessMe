@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'gm-join',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JoinComponent implements OnInit {
 
-  constructor() { }
+  id = -5;
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.id = params['id'];
+    });
   }
 
 }

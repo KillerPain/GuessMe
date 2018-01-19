@@ -25,7 +25,7 @@ const routes: Routes = [
     component: GameComponent
   },
   {
-    path: 'join',
+    path: 'join/:id',
     component: JoinComponent
   }
 ];
