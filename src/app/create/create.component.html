@@ -1,48 +1,41 @@
-<div class="container">
-  <h1>Create Game</h1>
-  <mat-vertical-stepper>
-    <mat-step>
-      <form>
-        <ng-template matStepLabel>Name Your Game</ng-template>
-        <mat-form-field>
-          <input matInput placeholder="Name Of The Game" required>
-        </mat-form-field>
-        <div>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step>
-      <ng-template matStepLabel>Add Questions</ng-template>
-      <button mat-button class="add" (click)="openDialog()">Add Question</button>
-      <div class="questions">
-        <div class="card">
-          <span>Name</span>
-          <span class="answers correct">Correct Answer</span>
-          <span class="answers">Answer</span>
-          <span class="answers">Answer</span>
-          <span class="answers">Answer</span>
-        </div>
-        <div class="card">
-          <span>Name</span>
-          <span class="answers correct">Correct Answer</span>
-          <span class="answers">Answer</span>
-          <span class="answers">Answer</span>
-          <span class="answers">Answer</span>
-        </div>
-      </div>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </mat-step>
-    <mat-step>
-      <ng-template matStepLabel>Done</ng-template>
-      <h3>You are now done.</h3>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button>Finish</button>
-      </div>
-    </mat-step>
-  </mat-vertical-stepper>
-</div>
+<form (ngSubmit)="createGame()">
+    <div class="container">
+        <h1>Create Game</h1>
+        <mat-vertical-stepper>
+            <mat-step>
+                <ng-template matStepLabel>Name Your Game</ng-template>
+                <mat-form-field>
+                    <input matInput placeholder="Name Of The Game" required [ngModelOptions]="{standalone: true}" [(ngModel)]=" name ">
+                </mat-form-field>
+                <div>
+                    <button type="button" mat-button matStepperNext>Next</button>
+                </div>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Add Questions</ng-template>
+                <button type="button" mat-button class="add " (click)="openDialog() ">Add Question</button>
+                <div class="questions ">
+                    <div class="card " *ngFor="let item of questions">
+                        <span>{{item.url}}</span>
+                        <span class="answers " [class.correct]="item.correct === 'A'">{{item.optionA}}</span>
+                        <span class="answers " [class.correct]="item.correct === 'B'">{{item.optionB}}</span>
+                        <span class="answers " [class.correct]="item.correct === 'C'">{{item.optionC}}</span>
+                        <span class="answers " [class.correct]="item.correct === 'D'">{{item.optionD}}</span>
+                    </div>
+                </div>
+                <div>
+                    <button type="button" mat-button matStepperPrevious>Back</button>
+                    <button type="button" mat-button matStepperNext>Next</button>
+                </div>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Done</ng-template>
+                <h3>You are now done.</h3>
+                <div>
+                    <button type="button" mat-button matStepperPrevious>Back</button>
+                    <button mat-button type="submit">Finish</button>
+                </div>
+            </mat-step>
+        </mat-vertical-stepper>
+    </div>
+</form>

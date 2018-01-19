@@ -1,51 +1,51 @@
 <div class="container">
-  <form action="">
-    <div class="top">
-      <h2>Add Question</h2>
-      <mat-form-field class="full">
-        <input matInput placeholder="Url of Song">
-      </mat-form-field>
-      <div class="time">
-        <mat-form-field class="full">
-          <input matInput placeholder="Start Time">
-        </mat-form-field>
-        <mat-form-field class="full">
-          <input matInput placeholder="End Time">
-        </mat-form-field>
-      </div>
-    </div>
-    <div class="answers">
-      <mat-radio-group>
-        <div class="group">
-          <mat-form-field class="full">
-            <input matInput placeholder="Answer 1">
-          </mat-form-field>
-          <mat-radio-button value="1" [checked]="true">Correct</mat-radio-button>
+    <form [formGroup]="questionForm" (ngSubmit)="createQuestion()">
+        <div class="top">
+            <h2>Add Question</h2>
+            <mat-form-field class="full">
+                <input formControlName="url" matInput placeholder="Song url, e.g. https://soundcloud.com/collin_c...">
+            </mat-form-field>
+            <div class="time">
+                <mat-form-field class="full">
+                    <input formControlName="startTime" matInput placeholder="Start Time(in sec.), e.g. 15">
+                </mat-form-field>
+                <mat-form-field class="full">
+                    <input matInput formControlName="finishTime" placeholder="Finish Time(in sec.), e.g. 20">
+                </mat-form-field>
+            </div>
         </div>
-        <div class="group">
-          <mat-form-field class="full">
-            <input matInput placeholder="Answer 2">
-          </mat-form-field>
-          <mat-radio-button value="2">Correct</mat-radio-button>
+        <div class="answers">
+            <mat-radio-group formControlName="correct">
+                <div class="group">
+                    <mat-form-field class="full">
+                        <input formControlName="answer1" matInput placeholder="Answer 1">
+                    </mat-form-field>
+                    <mat-radio-button name="ok" type="radio" value="A" [checked]="true">Correct</mat-radio-button>
+                </div>
+                <div class="group">
+                    <mat-form-field class="full">
+                        <input formControlName="answer2" matInput placeholder="Answer 2">
+                    </mat-form-field>
+                    <mat-radio-button name="ok" type="radio" value="B">Correct</mat-radio-button>
+                </div>
+                <div class="group">
+                    <mat-form-field class="full">
+                        <input formControlName="answer3" matInput placeholder="Answer 3">
+                    </mat-form-field>
+                    <mat-radio-button name="ok" type="radio" value="C">Correct</mat-radio-button>
+                </div>
+                <div class="group">
+                    <mat-form-field class="full">
+                        <input formControlName="answer4" matInput placeholder="Answer 4">
+                    </mat-form-field>
+                    <mat-radio-button name="ok" type="radio" value="D">Correct</mat-radio-button>
+                </div>
+            </mat-radio-group>
         </div>
-        <div class="group">
-          <mat-form-field class="full">
-            <input matInput placeholder="Answer 3">
-          </mat-form-field>
-          <mat-radio-button value="3">Correct</mat-radio-button>
+        <div class="buttons">
+            <button type="button" mat-button class="button">Cancel</button>
+            <button mat-button class="button add">Add</button>
         </div>
-        <div class="group">
-          <mat-form-field class="full">
-            <input matInput placeholder="Answer 4">
-          </mat-form-field>
-          <mat-radio-button value="4">Correct</mat-radio-button>
-        </div>
-      </mat-radio-group>
-    </div>
-    <div class="buttons">
-      <button mat-button class="button">Cancel</button>
-      <button mat-button class="button add">Add</button>
-    </div>
-  </form>
+    </form>
 
 </div>

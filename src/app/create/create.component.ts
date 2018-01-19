@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { FormComponent } from '../form/form.component';
+import { CreateComponentService } from './create-component.service';
 
 @Component({
   selector: 'gm-create',
@@ -9,11 +10,25 @@ import { FormComponent } from '../form/form.component';
 })
 export class CreateComponent implements OnInit {
 
-  constructor(private dialog: MatDialog) { }
+  name: string;
+  questions = [];
+
+  constructor(private service: CreateComponentService, private dialog: MatDialog) { 
+  }
 
   ngOnInit() {
   }
+
   openDialog() {
-    this.dialog.open(FormComponent);
+    let dialogRef = this.dialog.open(FormComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      if (result != undefined) {
+        this.questions.push(result);
+      }
+    });
+  }
+
+  createGame() {
+    this.service.createGame(this.name, this.questions);
   }
 }
