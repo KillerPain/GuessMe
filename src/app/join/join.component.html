@@ -2,10 +2,10 @@
   <form>
     <h2>Join Game!</h2>
     <mat-form-field class="full">
-      <input matInput placeholder="Your Name">
+      <input matInput placeholder="Game Url" [(ngModel)]="id" name="gameId">
     </mat-form-field>
     <mat-form-field class="full">
-      <input matInput placeholder="Game Url">
+      <input matInput placeholder="Your Name">
     </mat-form-field>
     <button mat-button class="button">Join</button>
   </form>
