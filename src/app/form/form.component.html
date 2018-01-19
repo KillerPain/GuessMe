@@ -1,3 +1,49 @@
-<p>
-  form works!
-</p>
+<div class="container">
+  <form action="">
+    <h2>Add Question</h2>
+    <mat-form-field class="full">
+      <input matInput placeholder="Url of Song">
+    </mat-form-field>
+    <div class="time">
+      <mat-form-field class="full">
+        <input matInput placeholder="Start Time">
+      </mat-form-field>
+      <mat-form-field class="full">
+        <input matInput placeholder="End Time">
+      </mat-form-field>
+    </div>
+    <div class="answers">
+      <mat-radio-group>
+        <div class="group">
+          <mat-form-field class="full">
+            <input matInput placeholder="Answer 1">
+          </mat-form-field>
+          <mat-radio-button value="1" [checked]="true">Correct</mat-radio-button>
+        </div>
+        <div class="group">
+          <mat-form-field class="full">
+            <input matInput placeholder="Answer 2">
+          </mat-form-field>
+          <mat-radio-button value="2">Correct</mat-radio-button>
+        </div>
+        <div class="group">
+          <mat-form-field class="full">
+            <input matInput placeholder="Answer 3">
+          </mat-form-field>
+          <mat-radio-button value="3">Correct</mat-radio-button>
+        </div>
+        <div class="group">
+          <mat-form-field class="full">
+            <input matInput placeholder="Answer 4">
+          </mat-form-field>
+          <mat-radio-button value="4">Correct</mat-radio-button>
+        </div>
+      </mat-radio-group>
+    </div>
+    <div class="buttons">
+      <button mat-button class="button">Cancel</button>
+      <button mat-button class="button add">Add</button>
+    </div>
+  </form>
+
+</div>

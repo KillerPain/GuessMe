@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-width: 450px;
+    form {
+        display: flex;
+        flex-direction: column;
+        h2 {
+            margin: 5px auto;
+        }
+        .time {
+            display: flex;
+            justify-content: space-around;
+        }
+        .answers {
+            display: flex;
+            flex-direction: column;
+            .group {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                mat-radio-button {
+                    margin: 0 15px;
+                }
+            }
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px 0;
+            .button {
+                display: block;
+                width: 45%;
+                background-color: rgb(253, 115, 115);
+            }
+            .add {
+                background-color: rgb(75, 247, 75);
+            }
+        }
+    }
+}
+
+.full {
+    width: 100%;
+    margin: 0 2px;
+}
