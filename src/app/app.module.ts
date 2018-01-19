@@ -15,6 +15,7 @@ import { CreateComponent } from './create/create.component';
 import { FormComponent } from './form/form.component';
 
 import { AuthService } from './auth/auth.service';
+import { CreateComponentService } from './create/create-component.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { AuthService } from './auth/auth.service';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, CreateComponentService],
   bootstrap: [AppComponent],
   entryComponents: [FormComponent]
 })
