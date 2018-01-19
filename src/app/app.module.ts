@@ -16,6 +16,9 @@ import { FormComponent } from './form/form.component';
 
 import { AuthService } from './auth/auth.service';
 import { CreateComponentService } from './create/create-component.service';
+import { GameComponent } from './game/game.component';
+import { JoinComponent } from './join/join.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { CreateComponentService } from './create/create-component.service';
     AuthComponent,
     ProfileComponent,
     CreateComponent,
-    FormComponent
+    FormComponent,
+    GameComponent,
+    JoinComponent
   ],
   imports: [
     BrowserModule,
