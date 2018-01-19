@@ -27,6 +27,10 @@ const routes: Routes = [
   {
     path: 'join/:id',
     component: JoinComponent
+  },
+  {
+    path: 'join',
+    component: JoinComponent
   }
 ];
 

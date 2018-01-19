@@ -19,6 +19,7 @@ import { CreateComponentService } from './create/create-component.service';
 import { GameComponent } from './game/game.component';
 import { GameComponentService } from './game/game-component.service';
 import { JoinComponent } from './join/join.component';
+import { JoinService } from './join/join.service';
 
 
 @NgModule({
@@ -41,7 +42,7 @@ import { JoinComponent } from './join/join.component';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [AuthService, CreateComponentService, GameComponentService],
+  providers: [AuthService, CreateComponentService, GameComponentService, JoinService],
   bootstrap: [AppComponent],
   entryComponents: [FormComponent]
 })
