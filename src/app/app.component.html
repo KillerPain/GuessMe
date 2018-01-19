@@ -1,1 +1,14 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span>Guess Me</span>
+    <div class="authorization">
+      <span class="right" *ngIf="!isUser; else UserBlock"> Login / Register </span>
+      <ng-template #UserBlock>
+        <span class="right"> Profile </span>
+        <span class="right"> Create Game </span>
+        <span class="right"> Join Game </span>
+      </ng-template>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
 <router-outlet></router-outlet>
