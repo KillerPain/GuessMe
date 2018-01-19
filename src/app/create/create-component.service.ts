@@ -13,9 +13,9 @@ export class CreateComponentService {
     const userData = JSON.parse(localStorage.getItem('userData'));
     const headers = new HttpHeaders().set('Content-Type', 'application/json;');
     this.http.post(this.createGameUrl, {
-        name: name,
-        host: userData.token
-    }, {headers: headers}).toPromise().then((data: any) => {
+      name: name,
+      host: userData.token
+    }, { headers: headers }).toPromise().then((data: any) => {
       questions.forEach(question => {
         this.addQuestion(data.id, userData, question);
       });
@@ -28,20 +28,20 @@ export class CreateComponentService {
     question.gameID = gameID;
     question.authUser = userData.token;
     // 'A' is always correct
-    if (question.correct == "B") {
-      [question.optionA, question.optionB] = [question.optionB, question.optionA] 
+    if (question.correct === 'B') {
+      [question.optionA, question.optionB] = [question.optionB, question.optionA];
     }
-    if (question.correct == "C") {
-      [question.optionA, question.optionC] = [question.optionC, question.optionA] 
+    if (question.correct === 'C') {
+      [question.optionA, question.optionC] = [question.optionC, question.optionA];
     }
-    if (question.correct == "D") {
-      [question.optionA, question.optionD] = [question.optionD, question.optionA] 
+    if (question.correct === 'D') {
+      [question.optionA, question.optionD] = [question.optionD, question.optionA];
     }
     delete question.correct;
     //
     const headers = new HttpHeaders().set('Content-Type', 'application/json;');
-    this.http.post(this.createQuestionUrl, question, {headers: headers}).toPromise().then((data: any) => {
-      console.log("DONE!")
+    this.http.post(this.createQuestionUrl, question, { headers: headers }).toPromise().then((data: any) => {
+      console.log('DONE!');
     }).catch(error => {
       console.log(error);
     });

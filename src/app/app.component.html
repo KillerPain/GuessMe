@@ -2,11 +2,11 @@
   <mat-toolbar-row>
     <span>Guess Me</span>
     <div class="authorization">
-      <span class="right" *ngIf="!isUser; else UserBlock"> Login / Register </span>
+      <span class="right" *ngIf="!isUser; else UserBlock" [routerLink]="['']"> Login / Register </span>
       <ng-template #UserBlock>
-        <span class="right"> Profile </span>
-        <span class="right"> Create Game </span>
-        <span class="right"> Join Game </span>
+        <span class="right" [routerLink]="['profile']"> Profile </span>
+        <span class="right" [routerLink]="['create']"> Create Game </span>
+        <span class="right" [routerLink]="['game']"> Join Game </span>
       </ng-template>
     </div>
   </mat-toolbar-row>
