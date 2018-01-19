@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class GameComponent implements OnInit {
 
   id: number;
+  isGame = true;
   players = [{ name: 'Ilias', score: 50 }, { name: 'Ilias', score: 60 }, { name: 'Ilias', score: 10 },
   { name: 'Ilias', score: 40 }, { name: 'Ilias', score: 30 }, { name: 'Ilias', score: 80 }];
 
