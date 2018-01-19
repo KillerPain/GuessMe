@@ -16,7 +16,6 @@ export class CreateComponentService {
         name: name,
         host: userData.token
     }, {headers: headers}).toPromise().then((data: any) => {
-      console.log("ENTERED BLIA");
       questions.forEach(question => {
         this.addQuestion(data.id, userData, question);
       });
