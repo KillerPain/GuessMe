@@ -84,6 +84,12 @@
                     cursor: pointer;
                     border-radius: 10px;
                 }
+                &.correct {
+                    background-color: #88e162;
+                }
+                &.wrong {
+                    background-color: #fd7373;
+                }
             }
         }
     }
