@@ -20,6 +20,9 @@ import { GameComponent } from './game/game.component';
 import { GameComponentService } from './game/game-component.service';
 import { JoinComponent } from './join/join.component';
 import { JoinService } from './join/join.service';
+import { FileComponent } from './file/file.component';
+import { AwsService } from './aws.service';
+import { ProfileService } from './profile/profile.service';
 
 
 @NgModule({
@@ -30,7 +33,8 @@ import { JoinService } from './join/join.service';
     CreateComponent,
     FormComponent,
     GameComponent,
-    JoinComponent
+    JoinComponent,
+    FileComponent
   ],
   imports: [
     BrowserModule,
@@ -42,8 +46,8 @@ import { JoinService } from './join/join.service';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [AuthService, CreateComponentService, GameComponentService, JoinService],
+  providers: [AuthService, CreateComponentService, GameComponentService, JoinService, AwsService, ProfileService],
   bootstrap: [AppComponent],
-  entryComponents: [FormComponent]
+  entryComponents: [FormComponent, FileComponent]
 })
 export class AppModule { }
