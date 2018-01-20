@@ -3,7 +3,7 @@
         <span>Name Of The Game</span>
         <span class="author">Author Of The Game</span>
     </div>
-    <div class="bottom">
+    <div class="bottom" *ngIf="!isGame; else QuestionBlock">
         <div class="card" *ngFor="let item of players">
             <div class="avatar">
                 <img src="https://www.1plusx.com/app/mu-plugins/all-in-one-seo-pack-pro/images/default-user-image.png" alt="">
@@ -16,4 +16,18 @@
             </div>
         </div>
     </div>
+    <ng-template #QuestionBlock>
+        <div class="question">
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/201642072&amp;color=%23847c84&amp;auto_play=true&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_teaser=false"
+                style="display: none"></iframe>
+            <h1>Can you Guess?)</h1>
+            <div class="answers">
+                <span>Question 1</span>
+                <span>Question 2</span>
+                <span>Question 3</span>
+                <span>Question 4</span>
+            </div>
+        </div>
+    </ng-template>
 </div>
+>>>>>>> 3c2258a4895200c63c07ecfaa3f3b028d77499e0
