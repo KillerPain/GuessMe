@@ -1,20 +1,20 @@
 <div class="container">
-  <div class="top">
-    <span>Name Of The Game</span>
-    <span class="author">Author Of The Game</span>
-  </div>
-  <div class="bottom" *ngIf="!isGame; else QuestionBlock">
-    <div class="card" *ngFor="let item of players">
-      <div class="avatar">
-        <img src="https://www.1plusx.com/app/mu-plugins/all-in-one-seo-pack-pro/images/default-user-image.png" alt="">
-      </div>
-      <div class="name">
-        <span>Name of The Player</span>
-      </div>
-      <div class="score">
-        <span>{{item.score}}</span>
-      </div>
+    <div class="top">
+        <span>Name Of The Game</span>
+        <span class="author">Author Of The Game</span>
     </div>
+    <div class="bottom" *ngIf="!isGame; else QuestionBlock">
+        <div class="card" *ngFor="let item of players">
+            <div class="avatar">
+                <img src="https://www.1plusx.com/app/mu-plugins/all-in-one-seo-pack-pro/images/default-user-image.png" alt="">
+            </div>
+            <div class="name">
+                <span>{{item.name}}</span>
+            </div>
+            <div class="score">
+                <span>{{item.score?item.score:0}}</span>
+            </div>
+        </div>
   </div>
   <ng-template #QuestionBlock>
     <div class="question">
@@ -27,6 +27,5 @@
         <span>Question 3</span>
         <span>Question 4</span>
       </div>
-    </div>
-  </ng-template>
+    </div>    
 </div>

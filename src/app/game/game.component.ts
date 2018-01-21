@@ -11,9 +11,8 @@ import { Router } from '@angular/router';
 export class GameComponent implements OnInit {
 
   id: number;
-  isGame = true;
-  players = [{ name: 'Ilias', score: 50 }, { name: 'Ilias', score: 60 }, { name: 'Ilias', score: 10 },
-  { name: 'Ilias', score: 40 }, { name: 'Ilias', score: 30 }, { name: 'Ilias', score: 80 }];
+  isGame = false;
+  players = []
 
   constructor(private route: ActivatedRoute, private r: Router, private service: GameComponentService) { }
 
@@ -22,13 +21,21 @@ export class GameComponent implements OnInit {
       this.id = +params['id'];
       const playerData = JSON.parse(localStorage.getItem('playerData'));
       if (playerData === null || playerData['token'] === null) {
-        //this.toJoin(this.id);
+        this.toJoin(this.id);
         return;
       }
       this.service.hasPlayer(this.id, playerData).then(result => {
         console.log(result);
         if (!result) {
-          // this.toJoin(this.id);
+          this.toJoin(this.id);
+        }
+        return result;
+      }).then(hasPlayer => {
+        if (hasPlayer) {
+          this.service.getAllPlayers(this.id).then(data => {
+            console.log(data);
+            this.players = data;
+          })
         }
       });
     });
